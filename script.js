@@ -186,18 +186,26 @@ function updateChart(employees) {
 
 window.onload = function () {
 
-  // Get saved company name from browser memory
   const companyName = localStorage.getItem("companyName");
+  const companyLocation = localStorage.getItem("companyLocation");
+  const companyDescription = localStorage.getItem("companyDescription");
 
-  // Find the title element
   const title = document.getElementById("dashboardTitle");
+  const location = document.getElementById("companyLocation");
+  const description = document.getElementById("companyDescription");
 
-  // If company name exists, show it
   if (companyName && title) {
     title.innerText = companyName + " - Employee Dashboard";
   }
 
-  // Then load employees
+  if (companyLocation && location) {
+    location.innerText = "Location: " + companyLocation;
+  }
+
+  if (companyDescription && description) {
+    description.innerText = companyDescription;
+  }
+
   loadEmployees();
 };
 /* ================= DARK MODE ================= */
