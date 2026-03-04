@@ -17,8 +17,8 @@ function register(event) {
   localStorage.setItem("companyName", company);
   localStorage.setItem("password", password);
   localStorage.setItem("industry", industry);
-  localStorage.setItem("location", location);
-  localStorage.setItem("about", about);
+  localStorage.setItem("companyLocation", location);
+  localStorage.setItem("companyDescription", about);
 
   alert("Registration Successful!");
 
