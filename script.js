@@ -203,7 +203,7 @@ window.onload = function () {
   }
 
   if (companyDescription && description) {
-    description.innerText = companyDescription;
+    description.innerText = "About: " + companyDescription;
   }
 
   loadEmployees();
