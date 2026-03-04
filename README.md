@@ -19,5 +19,8 @@ A simple Workforce Analytics Dashboard built using HTML, CSS, JavaScript and Cha
 ## Project Purpose
 This project demonstrates a basic workforce management system with analytics visualization, allowing users to manage employee records and view department-wise insights.
 
+Live Demo:
+https://dineshpolisetti.github.io/workforce-dashboard/
+
 ## Author
 Dinesh Polisetti
