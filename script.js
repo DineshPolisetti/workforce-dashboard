@@ -1,3 +1,49 @@
+/* ================= DEMO DATA FOR PUBLIC VIEW ================= */
+
+if (!localStorage.getItem("companyName")) {
+
+  localStorage.setItem("companyName", "Deloitte");
+  localStorage.setItem("companyLocation", "Hyderabad");
+  localStorage.setItem(
+    "companyDescription",
+    "Deloitte is a global professional services company providing consulting, audit, tax and advisory services."
+  );
+
+}
+
+if (!localStorage.getItem("employees")) {
+
+  const demoEmployees = [
+
+  {empId:"EMP001", empName:"Rahul Sharma", department:"IT", salary:75000, status:"Active"},
+  {empId:"EMP002", empName:"Priya Reddy", department:"HR", salary:65000, status:"Active"},
+  {empId:"EMP003", empName:"Arjun Kumar", department:"Finance", salary:72000, status:"On Leave"},
+  {empId:"EMP004", empName:"Sneha Patel", department:"IT", salary:80000, status:"Active"},
+  {empId:"EMP005", empName:"Kiran Verma", department:"Marketing", salary:60000, status:"Resigned"},
+
+  {empId:"EMP006", empName:"Ananya Gupta", department:"IT", salary:90000, status:"Active"},
+  {empId:"EMP007", empName:"Vikram Singh", department:"Finance", salary:85000, status:"Active"},
+  {empId:"EMP008", empName:"Neha Sharma", department:"HR", salary:62000, status:"Active"},
+  {empId:"EMP009", empName:"Rohit Mehta", department:"Marketing", salary:58000, status:"On Leave"},
+  {empId:"EMP010", empName:"Pooja Nair", department:"IT", salary:92000, status:"Active"},
+
+  {empId:"EMP011", empName:"Amit Das", department:"Finance", salary:78000, status:"Active"},
+  {empId:"EMP012", empName:"Divya Iyer", department:"HR", salary:64000, status:"Active"},
+  {empId:"EMP013", empName:"Sandeep Yadav", department:"IT", salary:87000, status:"Resigned"},
+  {empId:"EMP014", empName:"Meera Joshi", department:"Marketing", salary:61000, status:"Active"},
+  {empId:"EMP015", empName:"Karthik Reddy", department:"IT", salary:95000, status:"Active"},
+
+  {empId:"EMP016", empName:"Ritika Kapoor", department:"Finance", salary:76000, status:"Active"},
+  {empId:"EMP017", empName:"Manish Agarwal", department:"Marketing", salary:59000, status:"Active"},
+  {empId:"EMP018", empName:"Nisha Verma", department:"HR", salary:63000, status:"On Leave"},
+  {empId:"EMP019", empName:"Aditya Sharma", department:"IT", salary:88000, status:"Active"},
+  {empId:"EMP020", empName:"Shreya Banerjee", department:"Finance", salary:81000, status:"Active"}
+
+  ];
+
+  localStorage.setItem("employees", JSON.stringify(demoEmployees));
+
+}
 let deptChartInstance = null;
 /* ================= PROTECT DASHBOARD ================= */
 
