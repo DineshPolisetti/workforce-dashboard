@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page">
+
+<div class="form-card">
+  <h2>Create Company Account</h2>
+
+  <form onsubmit="register(event)">
+    <input type="text" id="companyName" placeholder="Company Name" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <input type="text" id="industry" placeholder="Industry" required>
+    <input type="text" id="location" placeholder="Location" required>
+    <textarea id="about" placeholder="About Company" required></textarea>
+    <button type="submit">Register</button>
+  </form>
+
+  <a href="login.html" class="form-link">Already Registered? Login</a>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

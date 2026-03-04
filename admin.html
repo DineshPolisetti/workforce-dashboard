@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page">
+
+<div class="form-card">
+  <h2>Add Employee</h2>
+
+  <form onsubmit="saveEmployee(event)">
+    <input type="text" id="empId" placeholder="Employee ID" required>
+    <input type="text" id="empName" placeholder="Employee Name" required>
+    <input type="text" id="department" placeholder="Department" required>
+    <input type="number" id="salary" placeholder="Salary" required>
+
+    <select id="status" required>
+      <option value="">Select Status</option>
+      <option value="Active">Active</option>
+      <option value="On Leave">On Leave</option>
+      <option value="Resigned">Resigned</option>
+    </select>
+
+    <button type="submit">Save Employee</button>
+  </form>
+
+  <a href="index.html" class="form-link">Back to Dashboard</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
