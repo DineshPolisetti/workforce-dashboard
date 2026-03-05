@@ -83,22 +83,23 @@ function saveEmployee(event) {
 
 
 /* ================= LOAD EMPLOYEES ================= */
-
 function loadEmployees() {
 
   const employeeList = document.getElementById("employeeList");
   if (!employeeList) return;
 
-  let company = localStorage.getItem("companyName");
+  const company = localStorage.getItem("companyName");
 
+  let employees = [];
+
+  // Visitor (no login) → show demo
   if (!company) {
-    company = "Deloitte";
+    employees = JSON.parse(localStorage.getItem("employees_Deloitte")) || [];
   }
-
-  let employees =
-    JSON.parse(localStorage.getItem("employees_" + company)) ||
-    JSON.parse(localStorage.getItem("employees_Deloitte")) ||
-    [];
+  // Logged company → show ONLY their data
+  else {
+    employees = JSON.parse(localStorage.getItem("employees_" + company)) || [];
+  }
 
   employeeList.innerHTML = "";
 
