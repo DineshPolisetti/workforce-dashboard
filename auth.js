@@ -38,6 +38,7 @@ function login(event) {
   const storedPassword = localStorage.getItem("password");
 
   if (company === storedCompany && password === storedPassword) {
+    localStorage.setItem("currentCompany", company);
 
     localStorage.setItem("isLoggedIn", "true");
 
