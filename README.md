@@ -69,6 +69,7 @@ CSS3	Styling and layout
 JavaScript	Core application logic
 Chart.js	Data visualization
 LocalStorage	Client-side data persistence
+
 📂 Project Structure
 workforce-dashboard
 │
@@ -80,6 +81,7 @@ workforce-dashboard
 ├── auth.js
 ├── style.css
 └── README.md
+
 👨‍💻 Author
 
 Dinesh Polisetti
