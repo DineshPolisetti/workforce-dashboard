@@ -1,7 +1,7 @@
 /* ================= REGISTER ================= */
 
 function register(event) {
-  event.preventDefault();   // stop form refresh
+  event.preventDefault();
 
   const company = document.getElementById("companyName").value.trim();
   const password = document.getElementById("password").value.trim();
@@ -29,7 +29,8 @@ function register(event) {
 /* ================= LOGIN ================= */
 
 function login(event) {
-  event.preventDefault();   // stop refresh
+
+  event.preventDefault();
 
   const company = document.getElementById("companyName").value.trim();
   const password = document.getElementById("password").value.trim();
@@ -38,21 +39,27 @@ function login(event) {
   const storedPassword = localStorage.getItem("password");
 
   if (company === storedCompany && password === storedPassword) {
-    localStorage.setItem("currentCompany", company);
 
+    localStorage.setItem("companyName", company);   // important
     localStorage.setItem("isLoggedIn", "true");
 
     window.location.href = "index.html";
 
   } else {
+
     alert("Invalid Company Name or Password");
+
   }
+
 }
 
 
 /* ================= LOGOUT ================= */
 
 function logout() {
+
   localStorage.removeItem("isLoggedIn");
+
   window.location.href = "login.html";
+
 }
