@@ -1,22 +1,17 @@
 📊 Workforce Analytics Dashboard
 
-A Workforce Analytics Dashboard built using HTML, CSS, JavaScript, and Chart.js that allows organizations to manage employee records and visualize workforce insights through an interactive analytics interface.
+The Workforce Analytics Dashboard is a web-based application built using HTML, CSS, JavaScript, and Chart.js.
+It enables organizations to manage employee records and visualize workforce insights through an interactive analytics dashboard.
 
-This project demonstrates practical implementation of data visualization, employee management, and dashboard analytics using frontend technologies.
+This project demonstrates how workforce data can be organized, analyzed, and presented using modern frontend technologies.
 
-🖥 Dashboard Preview
-dashboard-preview.png
+🌐 Live Demo
 
+🚀 Access the live application:
 
+https://dineshpolisetti.github.io/workforce-dashboard/
 
-🚀 Live Demo
-
-🌐 View Live Project
-
-👉 https://dineshpolisetti.github.io/workforce-dashboard/
-
-✨ Key Features
-
+✨ Features
 🔐 Company Authentication
 
 Company registration and login system
@@ -25,71 +20,91 @@ Secure session handling using LocalStorage
 
 👨‍💼 Employee Management
 
-Add employees
+➕ Add new employees
 
-Edit employee details
+✏️ Edit employee details
 
-Delete employee records
+❌ Delete employee records
 
-Real-time employee search
+🔍 Real-time employee search functionality
 
 📊 Workforce Analytics Dashboard
 
-Total Employees
+The dashboard automatically calculates key HR metrics:
 
-Active Employees
+👥 Total Employees
 
-Employees On Leave
+🟢 Active Employees
 
-Resigned Employees
+🟡 Employees on Leave
 
-Total Salary
+🔴 Resigned Employees
 
-Average Salary
+💰 Total Salary Expense
 
-📈 Interactive Data Visualization
+📈 Average Employee Salary
 
-Department-wise employee analytics chart using Chart.js
+📉 Data Visualization
 
-🎨 User Interface
+Interactive Department-wise Employee Analytics Chart
 
-Clean dashboard layout
+Built using Chart.js
 
-Dark mode toggle
+🎨 User Interface Enhancements
+
+🌙 Dark Mode Toggle
+
+📱 Clean and responsive dashboard layout
 
 💾 Data Storage
 
-Client-side storage using LocalStorage
+Client-side data storage using LocalStorage
 
-Separate employee data for each company
+Separate employee data storage for each registered company
 
 🛠 Technologies Used
-Technology	Purpose
-HTML5	Application structure
-CSS3	Styling and layout
-JavaScript	Core application logic
-Chart.js	Data visualization
-LocalStorage	Client-side data persistence
+
+HTML5 – Application structure
+
+CSS3 – User interface styling
+
+JavaScript (Vanilla JS) – Core application logic
+
+Chart.js – Data visualization library
+
+LocalStorage – Client-side data persistence
 
 📂 Project Structure
-
 workforce-dashboard
 │
-├── index.html
-├── register.html
-├── login.html
-├── admin.html
-├── script.js
-├── auth.js
-├── style.css
-└── README.md
+├── index.html        📊 Dashboard interface
+├── register.html     📝 Company registration page
+├── login.html        🔐 Login page
+├── admin.html        👨‍💼 Add employee page
+├── script.js         ⚙️ Dashboard logic
+├── auth.js           🔑 Authentication logic
+├── style.css         🎨 Styling
+└── README.md         📄 Project documentation
+🎯 Project Objective
+
+The objective of this project is to demonstrate the development of a basic workforce management and analytics system that allows organizations to manage employee records and analyze workforce insights through a dashboard interface.
+
+This project highlights practical skills in:
+
+📊 Data visualization
+
+💻 Frontend web development
+
+🧠 JavaScript data manipulation
+
+📈 Dashboard analytics design
 
 👨‍💻 Author
 
 Dinesh Polisetti
 🎓 B.Tech – Computer Science Engineering
 
-📧 dineshpolisetti72@gmail.com
+📧 Email: dineshpolisetti72@gmail.com
 
-🔗 LinkedIn
+🔗 LinkedIn:
 https://www.linkedin.com/in/dinesh-polisetti-510935352/
