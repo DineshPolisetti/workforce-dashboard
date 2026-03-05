@@ -71,6 +71,7 @@ Chart.js	Data visualization
 LocalStorage	Client-side data persistence
 
 📂 Project Structure
+
 workforce-dashboard
 │
 ├── index.html
