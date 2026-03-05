@@ -5,6 +5,7 @@ A Workforce Analytics Dashboard built using HTML, CSS, JavaScript, and Chart.js 
 This project demonstrates practical implementation of data visualization, employee management, and dashboard analytics using frontend technologies.
 
 🖥 Dashboard Preview
+dashboard-preview.png
 
 
 
