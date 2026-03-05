@@ -239,21 +239,33 @@ function updateChart(employees) {
 
 /* ================= INIT ================= */
 
+/* ================= INIT ================= */
+
 window.onload = function () {
 
-  let company = localStorage.getItem("companyName");
-
-  if (!company) {
-    company = "Deloitte";
-  }
+  const companyName = localStorage.getItem("companyName") || "Deloitte";
+  const companyLocation = localStorage.getItem("companyLocation") || "Hyderabad";
+  const companyDescription = localStorage.getItem("companyDescription") || 
+  "Deloitte is a global professional services company providing consulting, audit, tax and advisory services.";
 
   const title = document.getElementById("dashboardTitle");
+  const location = document.getElementById("companyLocation");
+  const description = document.getElementById("companyDescription");
 
   if (title) {
-    title.innerText = company + " - Employee Dashboard";
+    title.innerText = companyName + " - Employee Dashboard";
+  }
+
+  if (location) {
+    location.innerText = "Location: " + companyLocation;
+  }
+
+  if (description) {
+    description.innerText = "About: " + companyDescription;
   }
 
   loadEmployees();
+
 };
 
 
