@@ -32,7 +32,6 @@ if (!localStorage.getItem("employees_Deloitte")) {
   ];
 
   localStorage.setItem("employees_Deloitte", JSON.stringify(demoEmployees));
-
 }
 
 let deptChartInstance = null;
@@ -80,7 +79,6 @@ function saveEmployee(event) {
   alert("Employee Saved Successfully!");
 
   window.location.href = "index.html";
-
 }
 
 
@@ -93,12 +91,14 @@ function loadEmployees() {
 
   let company = localStorage.getItem("companyName");
 
-  // if visitor → show demo
   if (!company) {
     company = "Deloitte";
   }
 
-  let employees = JSON.parse(localStorage.getItem("employees_" + company)) || [];
+  let employees =
+    JSON.parse(localStorage.getItem("employees_" + company)) ||
+    JSON.parse(localStorage.getItem("employees_Deloitte")) ||
+    [];
 
   employeeList.innerHTML = "";
 
@@ -147,7 +147,12 @@ function loadEmployees() {
 
 function editEmployee(index) {
 
-  let company = localStorage.getItem("companyName") || "Deloitte";
+  let company = localStorage.getItem("companyName");
+
+  if (!company) {
+    alert("Demo data cannot be edited.");
+    return;
+  }
 
   let employees = JSON.parse(localStorage.getItem("employees_" + company)) || [];
 
@@ -178,7 +183,12 @@ function editEmployee(index) {
 
 function deleteEmployee(index) {
 
-  let company = localStorage.getItem("companyName") || "Deloitte";
+  let company = localStorage.getItem("companyName");
+
+  if (!company) {
+    alert("Demo data cannot be deleted.");
+    return;
+  }
 
   let employees = JSON.parse(localStorage.getItem("employees_" + company)) || [];
 
@@ -187,6 +197,28 @@ function deleteEmployee(index) {
   localStorage.setItem("employees_" + company, JSON.stringify(employees));
 
   loadEmployees();
+}
+
+
+/* ================= SEARCH EMPLOYEE ================= */
+
+function searchEmployee() {
+
+  const input = document.getElementById("searchEmployee").value.toLowerCase();
+  const cards = document.querySelectorAll(".emp-card");
+
+  cards.forEach(card => {
+
+    const text = card.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+
+  });
+
 }
 
 
@@ -206,7 +238,6 @@ function updateChart(employees) {
     }
 
     deptCount[emp.department]++;
-
   });
 
   const labels = Object.keys(deptCount);
@@ -239,18 +270,17 @@ function updateChart(employees) {
 
 /* ================= INIT ================= */
 
-/* ================= INIT ================= */
-
 window.onload = function () {
 
   const companyName = localStorage.getItem("companyName") || "Deloitte";
   const companyLocation = localStorage.getItem("companyLocation") || "Hyderabad";
-  const companyDescription = localStorage.getItem("companyDescription") || 
-  "Deloitte is a global professional services company providing consulting, audit, tax and advisory services.";
+  const companyDescription = localStorage.getItem("companyDescription");
+  const industry = localStorage.getItem("industry");
 
   const title = document.getElementById("dashboardTitle");
   const location = document.getElementById("companyLocation");
   const description = document.getElementById("companyDescription");
+  const industryText = document.getElementById("companyIndustry");
 
   if (title) {
     title.innerText = companyName + " - Employee Dashboard";
@@ -260,12 +290,15 @@ window.onload = function () {
     location.innerText = "Location: " + companyLocation;
   }
 
+  if (industry && industryText) {
+    industryText.innerText = "Industry: " + industry;
+  }
+
   if (description) {
     description.innerText = "About: " + companyDescription;
   }
 
   loadEmployees();
-
 };
 
 

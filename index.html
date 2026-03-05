@@ -1,29 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>WorkforcePro Dashboard</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
 <div class="dashboard-container">
 
-  <!-- TITLE BAR -->
+  <!-- ================= TITLE BAR ================= -->
   <div class="title-bar">
-  <h1 id="dashboardTitle">Employee Dashboard</h1>
-  <p id="companyLocation"></p>
-  <p id="companyDescription"></p>
-</div>
 
-  <!-- ACTION BUTTONS -->
-  <div class="dashboard-actions">
-    <button onclick="toggleDarkMode()">Dark Mode</button>
-    <a href="admin.html" class="add-btn">+ Add Employee</a>
-    <button onclick="logout()" class="logout-btn">Logout</button>
+    <h1 id="dashboardTitle">Employee Dashboard</h1>
+
+    <p id="companyLocation"></p>
+    <p id="companyIndustry"></p>
+    <p id="companyDescription"></p>
+
   </div>
 
-  <!-- KPI CARDS -->
+
+  <!-- ================= ACTION BUTTONS ================= -->
+  <div class="dashboard-actions">
+
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+    <a href="admin.html" class="add-btn">+ Add Employee</a>
+
+    <button onclick="logout()" class="logout-btn">Logout</button>
+
+  </div>
+
+
+  <!-- ================= KPI CARDS ================= -->
   <div class="dashboard-kpis">
 
     <div class="kpi-card">
@@ -52,23 +71,39 @@
     </div>
 
     <div class="kpi-card">
-      <h3>Avg Salary</h3>
+      <h3>Average Salary</h3>
       <p id="avgSalary">₹0</p>
     </div>
 
   </div>
 
-  <!-- CHART -->
+
+  <!-- ================= DEPARTMENT CHART ================= -->
   <div class="dashboard-chart">
+
     <canvas id="deptChart"></canvas>
+
   </div>
 
-  <!-- EMPLOYEES -->
+
+  <!-- ================= EMPLOYEE SECTION ================= -->
+
   <h2 class="employee-title">Employees</h2>
+
+  <input
+    type="text"
+    id="searchEmployee"
+    placeholder="Search employee..."
+    onkeyup="searchEmployee()"
+  >
+
   <div class="employee-grid" id="employeeList"></div>
 
 </div>
 
+
+<!-- ================= JAVASCRIPT ================= -->
 <script src="script.js"></script>
+
 </body>
 </html>
