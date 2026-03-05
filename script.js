@@ -274,7 +274,9 @@ window.onload = function () {
 
   const companyName = localStorage.getItem("companyName") || "Deloitte";
   const companyLocation = localStorage.getItem("companyLocation") || "Hyderabad";
-  const companyDescription = localStorage.getItem("companyDescription");
+const companyDescription =
+  localStorage.getItem("companyDescription") ||
+  "Deloitte is a global professional services company providing consulting, audit, tax, and advisory services.";
   const industry = localStorage.getItem("industry");
 
   const title = document.getElementById("dashboardTitle");
@@ -294,9 +296,9 @@ window.onload = function () {
     industryText.innerText = "Industry: " + industry;
   }
 
-  if (description) {
-    description.innerText = "About: " + companyDescription;
-  }
+  if (description && companyDescription) {
+  description.innerText = "About: " + companyDescription;
+}
 
   loadEmployees();
 };
